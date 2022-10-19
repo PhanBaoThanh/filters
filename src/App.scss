@@ -1,0 +1,89 @@
+@use './responsive.scss' as *;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  background-color: #f8fafc;
+}
+
+.App {
+  width: 100%;
+  margin-top: 120px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+  .nav{
+    width: 15%;
+    @include mobile{
+      width: 30%;
+    }
+    .navInput{
+      width: 100%;
+      background-color: #e2e8f0;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    .navItems{
+      .navHeader{
+        margin-top: 24px;
+        margin-bottom: 8px;
+      }
+
+      .navItem{
+        padding: 6px;
+        cursor: pointer;
+        user-select: none;
+        color: #64748b;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .products{
+    width: 80%;
+    @include mobile{
+      width: 70%;
+    }
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .product{
+      width: calc(100%/3);
+      @include mobile{
+        width: 100%;
+      }
+      padding: 0 8px;
+      margin-bottom: 32px;
+      text-align: center;
+      .img{
+        img{
+          width: 100%;
+          height: 200px;
+          border-radius: 4px;
+          object-fit: cover;
+          margin-bottom: 6px;
+        }
+      }
+
+      .productName{
+
+        color: #64748b;
+        margin-bottom: 4px;
+      }
+
+      .productCost{
+        font-weight: 600;
+      }
+    }
+  }
+}
